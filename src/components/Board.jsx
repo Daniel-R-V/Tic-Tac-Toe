@@ -7,7 +7,19 @@ export const Board = () => {
     const [isPlayerX, setIsPlayerX] = useState(true);
     const [winner, setWinner] = useState(null);
 
-    const calculateWinner = () => {};
+    const calculateWinner = () => {
+        for (let i = 0; i < gameValues.length; i++) {
+            if (gameValues[i] + gameValues[i + 1] + gameValues[i + 2] === "XXX" || gameValues[i] + gameValues[i + 1] + gameValues[i + 2] === "OOO") {
+                return gameValues[i];
+            } else if (gameValues[i] + gameValues[i + 3] + gameValues[i + 6] === "XXX" || gameValues[i] + gameValues[i + 3] + gameValues[i + 6] === "OOO") {
+                return gameValues[i];
+            } else if (gameValues[i] + gameValues[i + 4] + gameValues[i + 8] === "XXX" || gameValues[i] + gameValues[i + 4] + gameValues[i + 8] === "OOO") {
+                return gameValues[i];
+            } else if (gameValues[i] + gameValues[i + 2] + gameValues[i + 4] === "XXX" || gameValues[i] + gameValues[i + 2] + gameValues[i + 4] === "OOO") {
+                return gameValues[i];
+            }
+        }
+    };
 
     const updateValue = (index) => {
         gameValues[index] = isPlayerX ? "X" : "O";
