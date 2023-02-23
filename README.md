@@ -6,7 +6,7 @@
 
 🛠 **Created with React + HTML + CSS + Tailwind**
 
-⚡ Let's do a quick check out! This images are from project. It's a simple project to practise and improve my logic
+⚡ Let's do a quick check out! This images are from project. It's a simple project to practice and improve my logic
 
 
 
